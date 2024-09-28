@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assistant || Garud</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="../public/img/logo.png" alt="Garud Logo" class="logo" />
+        </div>
+        <div class="links">
+          <ul class="link-list">
+            <li><a href="../index.html" class="inter-user">Home</a></li>
+            <li>
+              <a href="../dashboard/index.html" class="inter-user">Dashboard</a>
+            </li>
+            <li>
+              <a href="./index.html" class="inter-user">Assistant</a>
+            </li>
+            <li>
+              <a href="../auth/login.html"
+                ><img src="../public/img/account.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="chat-container">
+          <div class="chat-head">
+            <h2 id="cb-text">Assistant</h2>
+          </div>
+          <div class="chat-box" id="chatBox"></div>
+          <div class="chat-ctrls">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Type your message..."
+            />
+            <button id="sendButton">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="brand">
+          <img src="../public/img/logo.png" alt="Garud Logo" class="brand" />
+          <div class="socials">
+            <a href=""><img src="./public/img/twitter.png" alt="" /></a>
+            <a href=""><img src="./public/img/linkedin.png" alt="" /></a>
+            <a href=""><img src="./public/img/insta.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="det hardware">
+          <h3>Hardware</h3>
+          <ul>
+            <li>Arduino Uno</li>
+            <li>ESP 32 Cam</li>
+            <li>Sonar Sensor</li>
+            <li>L298 Motor</li>
+            <li>Wifi Module</li>
+          </ul>
+        </div>
+        <div class="det software">
+          <h3>Software</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>MongoDB</li>
+            <li>Streamlit</li>
+          </ul>
+        </div>
+        <div class="det team">
+          <h3>Team</h3>
+          <ul>
+            <li>Eshyank Ryshabh</li>
+            <li>Nandini Jaiswal</li>
+            <li>Mohit Rahangdale</li>
+            <li>Aayush Bhusari</li>
+          </ul>
+        </div>
+      </footer>
+
+      <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+      <script type="module" src="./script,js"></script>
+    </main>
+  </body>
+</html>

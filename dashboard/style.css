@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+
+:root {
+  --bg-dark: #0c0020;
+  --bg-light: #4f3974;
+  --text: #d9d9d9;
+}
+
+.inter-user {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  padding: 10px 15px;
+  border-radius: 15%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.inter-user:hover {
+  background-color: #ff0000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  padding: 1rem 3rem;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.link-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  gap: 3rem;
+  list-style: none;
+}
+
+.link-list li a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.main1 {
+  padding-top: 10rem;
+  background-color: var(--bg-dark);
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.count {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  width: 250px;
+  color: var(--text);
+  padding: 10.87px 43.48px;
+  border-radius: 38.04px 0;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    rgba(217, 217, 217, 0.21) 0%,
+    rgba(255, 0, 0, 0.21) 100%
+  );
+  transition: background-color 0.3s ease-in-out;
+  font-size: 24px;
+}
+
+.count:hover {
+  background-color: #ff0000;
+}
+
+.gradient-divider-1 {
+  height: 20px;
+  background: linear-gradient(to bottom, var(--bg-dark), #4f3974);
+}
+
+.gradient-divider-2 {
+  height: 20px;
+  background: linear-gradient(to bottom, var(--bg-dark), #4f3974);
+}
+
+footer {
+  padding: 2rem;
+  background-color: var(--bg-light);
+  display: flex;
+  justify-content: space-evenly;
+  color: #d9d9d9;
+}
+
+.curr-loc {
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+marquee {
+  background-color: var(--bg-dark);
+  border: 1px solid red;
+  padding: 5px;
+  width: 100dvw;
+}
+
+.brand {
+  height: 50px;
+}
+
+.det {
+  line-height: 2;
+}
+
+footer h3 {
+  font-size: 25px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.text {
+  font-size: 50px;
+}

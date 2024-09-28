@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login || Garud</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+
+      :root {
+        --bg-dark: #0c0020;
+        --bg-light: #4f3974;
+        --text: #d9d9d9;
+      }
+
+      .inter-user {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        padding: 10px 15px;
+        border-radius: 15%;
+        transition: background-color 0.2s ease-in-out;
+        color: var(--text);
+      }
+
+      .inter-user:hover {
+        background-color: #ff0000;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: var(--text);
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        overflow: hidden;
+        padding: 1rem 3rem;
+        background-color: var(--bg-dark);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        height: 50px;
+      }
+
+      .link-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+        gap: 3rem;
+        list-style: none;
+      }
+
+      .link-list li a {
+        text-decoration: none;
+        color: var(--text);
+      }
+
+      main {
+        background-color: var(--bg-dark);
+      }
+
+      .login-form {
+        padding: 12rem 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .login {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .login-text {
+        font-size: 55px;
+        font-family: "Overlock";
+        font-weight: 700;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1.2rem;
+      }
+
+      .button {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        width: 250px;
+        height: 53.8px;
+        color: var(--text);
+        padding: 10.87px 43.48px;
+        border-radius: 38.04px 0;
+        border: none;
+        background: linear-gradient(
+          90deg,
+          rgba(217, 217, 217, 0.21) 0%,
+          rgba(255, 0, 0, 0.21) 100%
+        );
+        transition: background-color 0.3s ease-in-out;
+        font-size: 24px;
+      }
+
+      .button:hover {
+        background-color: #ff0000;
+      }
+
+      .field input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        background-color: transparent;
+        color: #fff;
+        outline: none;
+      }
+
+      .field input::placeholder {
+        color: var(--text);
+        font-size: 20px;
+      }
+
+      footer {
+        padding: 2rem;
+        background-color: var(--bg-light);
+        display: flex;
+        justify-content: space-evenly;
+        color: #d9d9d9;
+      }
+
+      .brand {
+        height: 50px;
+      }
+
+      .det {
+        line-height: 2;
+      }
+
+      footer h3 {
+        font-size: 25px;
+      }
+
+      footer ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: var(--text);
+      }
+
+      .socials {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="../public/img/logo.png" alt="Garud Logo" class="logo" />
+        </div>
+        <div class="links">
+          <ul class="link-list">
+            <li><a href="../index.html" class="inter-user">Home</a></li>
+            <li>
+              <a href="../dashboard/index.html" class="inter-user">Dashboard</a>
+            </li>
+            <li>
+              <a href="../assistant/index.html" class="inter-user">Assistant</a>
+            </li>
+            <li>
+              <a href="./login.html"
+                ><img src="../public/img/account.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="login-form">
+        <h2 class="login-text">Log In</h2>
+        <form class="login">
+          <div class="mail field">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Email ID"
+            /><br />
+          </div>
+          <div class="pass field">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            /><br />
+          </div>
+          <div class="buttons">
+            <button type="submit" class="button">Log In</button>
+            <button type="button" class="button">
+              <a href="./signup.html">Register Now</a>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="brand">
+        <img src="./public/img/logo.png" alt="Garud Logo" class="brand" />
+        <div class="socials">
+          <a href=""><img src="./public/img/twitter.png" alt="" /></a>
+          <a href=""><img src="./public/img/linkedin.png" alt="" /></a>
+          <a href=""><img src="./public/img/insta.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="det hardware">
+        <h3>Hardware</h3>
+        <ul>
+          <li>Arduino Uno</li>
+          <li>ESP 32 Cam</li>
+          <li>Sonar Sensor</li>
+          <li>L298 Motor</li>
+          <li>Wifi Module</li>
+        </ul>
+      </div>
+      <div class="det software">
+        <h3>Software</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>MongoDB</li>
+          <li>Streamlit</li>
+        </ul>
+      </div>
+      <div class="det team">
+        <h3>Team</h3>
+        <ul>
+          <li>Eshyank Ryshabh</li>
+          <li>Nandini Jaiswal</li>
+          <li>Mohit Rahangdale</li>
+          <li>Aayush Bhusari</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
