@@ -1,19 +1,16 @@
 maptilersdk.config.apiKey = "5vtNIzBUTTkkAjywRroq";
 const map = new maptilersdk.Map({
-  container: "curr-loc", // container's id or the HTML element to render the map
+  container: "curr-loc",
   style: maptilersdk.MapStyle.STREETS,
-  center: [16.62662018, 49.2125578], // starting position [lng, lat]
+  center: [16.62662018, 49.2125578],
   zoom: 14, // starting zoom
 });
 
-const API_KEY = "mDNDGcJvWw9SUfrZYyGu";
-const MODEL_ENDPOINT = "https://detect.roboflow.com/human-detection-e45xq";
-const VERSION = 1;
-const ESP32_CAPTURE_URL = "http://192.168.186.199/capture"; // Update to your ESP32 camera URL
+const ESP32_CAPTURE_URL = "http://192.168.186.199/capture";
 const canvas = document.getElementById("videoFeed");
-const processedCanvas = document.getElementById("processedFeed"); // New processed canvas
+const processedCanvas = document.getElementById("processedFeed");
 const ctx = canvas.getContext("2d");
-const processedCtx = processedCanvas.getContext("2d"); // Context for processed canvas
+const processedCtx = processedCanvas.getContext("2d");
 
 async function detect(frame) {
   const response = await fetch(`${MODEL_ENDPOINT}/${VERSION}`, {
@@ -22,7 +19,7 @@ async function detect(frame) {
       Authorization: `Bearer ${API_KEY}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ image: frame }), // Use 'image' instead of 'imageData'
+    body: JSON.stringify({ image: frame }),
   });
 
   if (response.ok) {
@@ -79,3 +76,43 @@ function drawBoxes(predictions) {
 
 // Main loop to capture frames and perform detection
 setInterval(captureFrame, 500); // Capture frame every 500 ms
+
+// This function will populate the table
+function populateTable(data) {
+  const tableBody = document.querySelector("#data-table tbody");
+
+  // Clear the existing rows
+  tableBody.innerHTML = "";
+
+  // Loop through the MongoDB data and append rows to the table
+  data.forEach((row) => {
+    const tr = document.createElement("tr");
+
+    // Create cells
+    const timeStampCell = document.createElement("td");
+    timeStampCell.textContent = row["Time Stamp"];
+    const detectedBodyCell = document.createElement("td");
+    detectedBodyCell.textContent = row["Detected body"];
+
+    // Append cells to the row
+    tr.appendChild(timeStampCell);
+    tr.appendChild(detectedBodyCell);
+
+    // Append row to the table body
+    tableBody.appendChild(tr);
+  });
+}
+
+// Fetch data from your MongoDB API and call the populateTable function
+async function fetchData() {
+  try {
+    const response = await fetch("http://localhost:8000/data");
+    const data = await response.json();
+    populateTable(data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+// Fetch and display the data when the page loads
+window.onload = fetchData;

@@ -57,7 +57,7 @@ nav {
 }
 
 .main1 {
-  padding-top: 10rem;
+  padding-top: 1rem;
   background-color: var(--bg-dark);
   display: flex;
   gap: 2.5rem;
@@ -138,4 +138,44 @@ footer ul {
 
 .text {
   font-size: 50px;
+}
+
+.report {
+  border: 1px solid white;
+  width: min-content;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+}
+
+table,
+th,
+td {
+  border: 1px solid white;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--bg-light);
+}
+
+.stats {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
 }

@@ -65,10 +65,32 @@
     </header>
 
     <main class="main1">
-      <h2 class="text">Rover's Current Location</h2>
-      <div class="count">Bodies Detected - <span id="count">0</span></div>
+      <h2 class="text">Rover Stats</h2>
+      <div class="count">Bodies Detected - <span id="count">2</span></div>
       <div class="marquee">
-        <marquee behavior="" direction="">Rover Tracking Data</marquee>
+        <marquee behavior="" direction=""
+          ><div class="report">
+            <h4>2 people detected</h4>
+            <h4>03:03</h4>
+          </div></marquee
+        >
+      </div>
+      <div class="stats">
+        <div class="graph"><img src="../public/img/graph.png" alt="" /></div>
+        <div class="table">
+          <h2>Detected Bodies Data</h2>
+          <table id="data-table">
+            <thead>
+              <tr>
+                <th>Time Stamp</th>
+                <th>Detected Body</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data rows will be appended here -->
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <!-- Google Maps Embed Without API Key -->

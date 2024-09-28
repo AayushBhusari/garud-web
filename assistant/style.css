@@ -195,7 +195,7 @@ body {
   background-color: var(--bg-light);
 }
 
-#userInput {
+.userInput {
   flex: 1;
   padding: 8px;
   border: none;
