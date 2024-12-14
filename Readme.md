@@ -4,7 +4,7 @@
 
 ## Overview
 
-**This is the website for GarudRover**
+**This is the website for GarudRover**.
 **GarudRover** is an innovative Guided Autonomous Rover designed to solve real-world challenges through advanced navigation, monitoring, and automation. The project combines cutting-edge technology in IoT, robotics, and AI to create a versatile rover capable of operating in diverse environments.
 
 This project proudly won the **Best Beginner Prize** at **HackTheSpace 2.0 Hackathon** held at SSTC, Bhilai.
